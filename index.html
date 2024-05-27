@@ -1,0 +1,35 @@
+ <html>
+    <head>
+        <style>
+                *{
+                    background-color: rgb(247, 199, 207);
+                }
+        </style>
+    </head>
+    <body>
+        <h1>Please add friends 💕</h1>
+
+        <input type="text" id="friend" placeholder="add friend">
+
+        <button onclick="addFriend()">Add friend</button>
+
+        <ul id="myFriends"></ul>
+
+
+        <script>
+            function addFriend(){
+                //create a new li
+                let newLi = document.createElement('li');
+                //get friend name
+                let name = document.getElementById('friend').value;  //ted
+                //add name to new li
+                newLi.innerText = name;
+                //get ul 
+                let list = document.getElementById('myFriends');
+                // add new li to ul
+                list.appendChild(newLi);
+                }
+        </script>
+       
+    </body>   
+ </html>
