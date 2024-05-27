@@ -26,6 +26,10 @@
                     alert('cant have an empty field');
                     return;
                 }
+                if (name.trim().length === 0){
+                    alert('cant have an empty field');
+                    return;
+                }
                 //add it to new li
                 newLi.innerText = name;     
 
