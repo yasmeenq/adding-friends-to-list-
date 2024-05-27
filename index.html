@@ -20,16 +20,21 @@
             function addFriend(){
                 //create a new li
                 let newLi = document.createElement('li');
-                //get friend name
-                let name = document.getElementById('friend').value;  //ted
-                //add name to new li
-                newLi.innerText = name;
-                //get ul 
-                let list = document.getElementById('myFriends');
-                // add new li to ul
-                list.appendChild(newLi);
+                //get friend name 
+                let name = document.getElementById('friend').value; 
+                if (name===''){
+                    alert('cant have an empty field');
+                    return;
+                }
+                //add it to new li
+                newLi.innerText = name;     
+
+                //get ul and add new li to ul
+                document.getElementById('myFriends').appendChild(newLi);
+                document.getElementById('friend').value = '';
                 }
         </script>
        
     </body>   
  </html>
+ 
